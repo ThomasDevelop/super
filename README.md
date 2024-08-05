@@ -77,8 +77,6 @@ O Sistema de Supermercado (PDV) é um sistema backend desenvolvido em Java utili
 - **Utils**: Classes utilitárias.
 - **Model**: Classes de domínio.
 
-## Configuração
-
 ## Documentação da API
 
 A documentação da API está disponível no Swagger. Após iniciar a aplicação, acesse:
@@ -87,6 +85,12 @@ A documentação da API está disponível no Swagger. Após iniciar a aplicaçã
 ## Testes
 
 Para testar a aplicação, utilize o Postman para interagir com os endpoints expostos e verificar a funcionalidade do sistema.
+- **Configurar o Banco de Dados**
+
+    - O projeto utiliza um banco de dados que está em outro repositório. Certifique-se de cloná-lo e configurá-lo corretamente. Você pode encontrar o repositório do banco de dados em: [Link para o Repositório do Banco de Dados](https://github.com/ThomasDevelop/codigoSqlSuperShop.git)
+
+    - Após configurar o banco de dados, insira as credenciais no arquivo `application.properties`.
+- **Compilar e Executar a Aplicação**
 
 ## 🤝 Agradecimentos:
 Obrigado [Foursys](https://br.linkedin.com/company/foursys). e professores: [Bruno Martin](https://www.linkedin.com/in/brunoermacora/) e [Denilson Elias](https://www.linkedin.com/in/denilsonbitit/), por me proporcionar essa experiência incrível de aprendizado e evolução 😎🤝
