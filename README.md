@@ -3,7 +3,7 @@
 ## Descrição
 
 
-O Sistema de Supermercado (SSM) é um sistema backend desenvolvido em Java utilizando Spring Boot, com foco na gestão de operações de um supermercado. O sistema é projetado para gerenciar administradores, fornecedores, produtos e vendas, oferecendo funcionalidades para cadastro, listagem e gerenciamento de dados.
+O Sistema de Supermercado (PDV) é um sistema backend desenvolvido em Java utilizando Spring Boot, com foco na gestão de operações de um supermercado. O sistema é projetado para gerenciar administradores, fornecedores, produtos e vendas, oferecendo funcionalidades para cadastro, listagem e gerenciamento de dados.
 
 ## Tecnologias Utilizadas
 
