@@ -70,7 +70,7 @@ public class FornecedorService {
         String cnpjLimpo = fornecedorDTO.getCnpj().replaceAll("[^\\d]", "");
         if (jdbcTemplateFornDAO.findByCnpj(fornecedorDTO.getCnpj()).isPresent() &&
                 !fornecedorExistente.getCnpj().equals(fornecedorDTO.getCnpj())) {
-            throw new CustomException("Fornecedor com este CNPJ já está cadastrado");
+            throw new CustomException("Fornecedor com CNPJ já está cadastrado");
         }
         fornecedorExistente.setNome(fornecedorDTO.getNome());
         fornecedorExistente.setCnpj(fornecedorDTO.getCnpj());
@@ -96,7 +96,7 @@ public class FornecedorService {
     }
     private void validarAdminId(String adminId) {
         if (!administradorService.buscarAdministradorPorId(adminId).isPresent()) {
-        throw new AdminIdInvalidoException("Admin ID inválido");
+        throw new AdminIdInvalidoException("ID do Admin inválido");
         }
     }
 }

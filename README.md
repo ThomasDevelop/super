@@ -1,19 +1,48 @@
 # Sistema de Supermercado PDV
 
+## Créditos
+
+
+✍ Projeto proposto pela ***Fourcamp***. Sendo disciplinado e orientado pelos mestres: *[Bruno Martin](https://www.linkedin.com/in/brunoermacora/)*
+e  *[Denilson Elias](https://www.linkedin.com/in/denilsonbitit/)*
+
 ## Descrição
 
 
 O Sistema de Supermercado (PDV) é um sistema backend desenvolvido em Java utilizando Spring Boot, com foco na gestão de operações de um supermercado. O sistema é projetado para gerenciar administradores, fornecedores, produtos e vendas, oferecendo funcionalidades para cadastro, listagem e gerenciamento de dados.
 
-## Tecnologias Utilizadas
+- ## Tecnologias usadas 💻
 
-- **Java**: Linguagem de programação principal.
-- **Spring Boot**: Framework para desenvolvimento de aplicações Java.
-- **PostgreSQL**: Banco de dados relacional.
-- **Lombok**: Biblioteca para redução de código boilerplate.
-- **Swagger**: Documentação da API.
-- **Postman**: Teste de APIs.
-- **JDBC Template**: Camada de persistência de dados.
+- **JAVA**: linguagem de programação principal.
+
+
+- **SPRING-BOOT**: Framework para desenvolvimento de aplicações Java.
+
+
+- **POSTGRESQL**: Banco de dados relacional.
+
+
+- **MAVEN**: Ferramenta principal utilizada para gerenciar essas aplicações em Java.
+
+
+- **POSTMAN**: Ferramenta para testar e manipular os endpoints da API.
+
+
+- **SWAGGER**: Documentação interativa dos endpoints.
+
+
+- **INTELLIJ**: Ambiente de desenvolvimento.
+
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" width="50" height="50" />
+<img src="https://github.com/user-attachments/assets/f83409ca-b336-453a-a45c-84c743fdd781" width="50" height="50" />
+<img src="https://github.com/user-attachments/assets/0304ff16-0be3-426a-9ae2-57846e217db8" width="45" height="45" />
+<img src="https://github.com/user-attachments/assets/01708cb5-c31d-409f-b73c-9de7d941c72c" width="45" height="45" />
+<img src="https://github.com/user-attachments/assets/205b41ac-971f-4871-92dc-468d2676a846" width="75" height="50" />
+<img src="https://github.com/user-attachments/assets/eb215758-11c4-49ad-8ab0-73624c23f44f" width="120" height="50" />
+<img src="https://github.com/user-attachments/assets/de8d1369-0da3-49a8-b892-5c11c0509987" width="40" height="40" />
+
+
 
 ## Funcionalidades
 
@@ -58,3 +87,6 @@ A documentação da API está disponível no Swagger. Após iniciar a aplicaçã
 ## Testes
 
 Para testar a aplicação, utilize o Postman para interagir com os endpoints expostos e verificar a funcionalidade do sistema.
+
+## 🤝 Agradecimentos:
+Obrigado [Foursys](https://br.linkedin.com/company/foursys). e professores: [Bruno Martin](https://www.linkedin.com/in/brunoermacora/) e [Denilson Elias](https://www.linkedin.com/in/denilsonbitit/), por me proporcionar essa experiência incrível de aprendizado e evolução 😎🤝
