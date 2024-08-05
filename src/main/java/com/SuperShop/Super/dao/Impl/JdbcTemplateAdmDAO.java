@@ -56,12 +56,8 @@ public class JdbcTemplateAdmDAO implements IJdbcTemplateAdmDAO {
     @Override
     public Administrador mapRow(ResultSet rs, int rowNum) {
         return null;
-    }
-<<<<<<< HEAD
-    public static class AdministradorRowMapper implements RowMapper<Administrador> {
-=======
+    }   
     private static class AdministradorRowMapper implements RowMapper<Administrador> {
->>>>>>> 102fa263415c29298c29325f6708a2c12fbc65ae
     @Override
     public Administrador mapRow(ResultSet rs, int rowNum) throws SQLException {
         Administrador administrador = new Administrador();

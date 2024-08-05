@@ -6,11 +6,8 @@ import com.SuperShop.Super.exception.AdminIdInvalidoException;
 import com.SuperShop.Super.model.Fornecedor;
 import com.SuperShop.Super.usecase.AdministradorService;
 import com.SuperShop.Super.usecase.FornecedorService;
-<<<<<<< HEAD
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
-=======
->>>>>>> 102fa263415c29298c29325f6708a2c12fbc65ae
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,20 +22,16 @@ import java.util.Map;
 import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/fornecedores")
-<<<<<<< HEAD
 @Tag(name = "Fornecedor", description = "API para gerenciamento de fornecedores")
-=======
->>>>>>> 102fa263415c29298c29325f6708a2c12fbc65ae
+
 public class FornecedorController {
     @Autowired
     private FornecedorService fornecedorService;
     @Autowired
     private AdministradorService administradorService;
     @PostMapping
-<<<<<<< HEAD
+
     @Operation(summary = "Adiciona um novo fornecedor")
-=======
->>>>>>> 102fa263415c29298c29325f6708a2c12fbc65ae
     public ResponseEntity<?> adicionarFornecedor(@RequestBody FornecedorDTO fornecedorDTO) {
         try {
             Fornecedor fornecedor = fornecedorService.adicionarFornecedor(fornecedorDTO);
@@ -51,10 +44,8 @@ public class FornecedorController {
         }
     }
     @PostMapping("/listar")
-<<<<<<< HEAD
     @Operation(summary = "Lista todos os fornecedores")
-=======
->>>>>>> 102fa263415c29298c29325f6708a2c12fbc65ae
+
     public ResponseEntity<?> listarFornecedores(@RequestBody FornecedorDTO fornecedorDTO) {
         try {
             List<Fornecedor> fornecedores = fornecedorService.listarFornecedores(fornecedorDTO.getAdminId());

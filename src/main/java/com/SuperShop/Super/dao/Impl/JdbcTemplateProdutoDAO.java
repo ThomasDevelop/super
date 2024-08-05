@@ -53,10 +53,6 @@ public class JdbcTemplateProdutoDAO implements IJdbcTemplateProdutoDAO {
         String sql = "SELECT * FROM produtos WHERE nome = ?";
         return jdbcTemplate.query(sql, new Object[]{nome}, new ProdutoRowMapper()).stream().findFirst();
     }
-//    @Override
-//    public Produto mapRow(ResultSet rs, int rowNum) {
-//        return null;
-//    }
     private static class ProdutoRowMapper implements RowMapper<Produto> {
     @Override
     public Produto mapRow(ResultSet rs, int rowNum) throws SQLException {
