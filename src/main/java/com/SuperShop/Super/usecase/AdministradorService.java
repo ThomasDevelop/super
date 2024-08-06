@@ -38,8 +38,12 @@ public class AdministradorService {
     }
     public Optional<Administrador> buscarAdministradorPorId(String id) {return jdbcTemplateAdmDAO.findById(id);
     }
-    public void deletarAdministrador(String id) {
+    public String deletarAdministrador(String id) {
+        if (buscarAdministradorPorId(id).isEmpty()) {
+            throw new CustomException("Administrador não encontrado");
+        }
         jdbcTemplateAdmDAO.deleteById(id);
+        return "Administrador deletado com sucesso";
     }
     public Administrador atualizarAdministrador(String id, AdministradorDTO administradorDTO) {
         validarAdministradorDTO(administradorDTO);

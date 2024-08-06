@@ -22,50 +22,51 @@ public class JdbcTemplateAdmDAO implements IJdbcTemplateAdmDAO {
     public Optional<Administrador> findById(String id) {
         String sql = "SELECT * FROM administradores WHERE id = ?";
         try {
-        Administrador administrador = jdbcTemplate.queryForObject(sql, new Object[]{id}, new AdministradorRowMapper());
-        return Optional.ofNullable(administrador);
+            Administrador administrador = jdbcTemplate.queryForObject(sql, new Object[]{id}, new AdministradorRowMapper());
+            return Optional.ofNullable(administrador);
         } catch (EmptyResultDataAccessException e) {
-        return Optional.empty();
+            return Optional.empty();
         }
     }
+
     @Override
     public Optional<Administrador> findByEmail(String email) {
         String sql = "SELECT * FROM administradores WHERE email = ?";
         try {
-        Administrador administrador = jdbcTemplate.queryForObject(sql, new Object[]{email}, new AdministradorRowMapper());
-        return Optional.ofNullable(administrador);
+            Administrador administrador = jdbcTemplate.queryForObject(sql, new Object[]{email}, new AdministradorRowMapper());
+            return Optional.ofNullable(administrador);
         } catch (EmptyResultDataAccessException e) {
-        return Optional.empty();
+            return Optional.empty();
         }
     }
+
     @Override
     public void save(Administrador administrador) {
-        String sql = "INSERT INTO administradores VALUES(?, ?, ?, ?)";
+        String sql = "INSERT INTO administradores (id, nome, email, senha) VALUES (?, ?, ?, ?)";
         jdbcTemplate.update(sql, administrador.getId(), administrador.getNome(), administrador.getEmail(), administrador.getSenha());
     }
+
     @Override
     public List<Administrador> findAll() {
         String sql = "SELECT * FROM administradores";
         return jdbcTemplate.query(sql, new AdministradorRowMapper());
     }
+
     @Override
     public void deleteById(String id) {
         String sql = "DELETE FROM administradores WHERE id = ?";
         jdbcTemplate.update(sql, id);
     }
-    @Override
-    public Administrador mapRow(ResultSet rs, int rowNum) {
-        return null;
-    }   
+
     private static class AdministradorRowMapper implements RowMapper<Administrador> {
-    @Override
-    public Administrador mapRow(ResultSet rs, int rowNum) throws SQLException {
-        Administrador administrador = new Administrador();
-        administrador.setId(rs.getString("id"));
-        administrador.setNome(rs.getString("nome"));
-        administrador.setEmail(rs.getString("email"));
-        administrador.setSenha(rs.getString("senha"));
-        return administrador;
+        @Override
+        public Administrador mapRow(ResultSet rs, int rowNum) throws SQLException {
+            Administrador administrador = new Administrador();
+            administrador.setId(rs.getString("id"));
+            administrador.setNome(rs.getString("nome"));
+            administrador.setEmail(rs.getString("email"));
+            administrador.setSenha(rs.getString("senha"));
+            return administrador;
         }
     }
 }
